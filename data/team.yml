@@ -1,0 +1,67 @@
+# We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/v2/
+# Fontawesome fonts are also available (Nightwire modification) - https://fontawesome.com/icons?d=gallery&m=free
+#
+enable  : true
+title   : Our Team
+members  :
+  - name  : Robin 'Definitely not Groot' Beismann
+    designation : IT Magician, Main TS admin
+    social :
+      - service     : twitter
+        fontawesome : fab fa-twitter-square
+        url         : https://twitter.com/robinbeismann
+      - service     : github
+        fontawesome : fab fa-github
+        url         : https://github.com/RobinBeismann
+      - service     : xing
+        fontawesome : fab fa-xing-square
+        url         : https://www.xing.com/profile/Robin_Beismann
+      - service     : website
+        fontawesome : fas fa-globe
+        url         : https://beismann.biz
+  
+  - name  : Mathias 'Matze' Schmidt
+    designation : Code monkey, Chaos engineer
+    description : Has build a WoW map viewer with unity.
+    social :
+      - service     : website
+        fontawesome : fas fa-globe
+        url         : https://matze.space
+  
+  - name  : Philip 'ShokiNN' Henning
+    image : images/team/philip.png
+    designation : Web foo, Automation, Some stuff with media
+    description : Just an other geek. Interested in Servers, Networking and everything which is blinking.
+    social :
+      - service     : twitter
+        fontawesome : fab fa-twitter-square
+        url         : https://www.twitter.com/__phg
+      - service     : github
+        fontawesome : fab fa-github
+        url         : https://github.com/shokinn
+      - service     : website
+        fontawesome : fas fa-globe
+        url         : https://pphg.tech
+
+  # - name  : Name Surname
+  #   image : images/team/team-3.jpg
+  #   designation : CEO, Master of desaster
+  #   description : Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+  #   social :
+  #     - service     : twitter
+  #       fontawesome : fab fa-twitter-square
+  #       url         : https://www.twitter.com/
+  #     - service     : faceook
+  #       fontawesome : fab fa-facebook
+  #       url         : https://facebook.com
+  #     - service     : linkedin
+  #       fontawesome : fab fa-linkedin
+  #       url         : https://linkedin.com
+  #     - service     : googleplus
+  #       fontawesome : fab fa-google-plus-square
+  #       url         : 
+  #       # You can use either ionicons or fontawesome icons
+  #     - service     : 
+  #       ionicon     : 
+  #       fontawesome : 
+  #       url         : 

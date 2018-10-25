@@ -1,0 +1,45 @@
+{{ if .Site.Data.team.enable }}
+{{ "<!-- Team Section Start -->" | safeHTML }}
+<section id="team">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                {{ with .Site.Data.team.title }}<h2 class="subtitle text-center">{{ . }}</h2>{{ end }}
+            </div>
+            {{ range $index, $element:= .Site.Data.team.members }}
+            <div class="col-md-3">
+                {{ $delay := mul $index 300 }}
+                <div class="team-member wow fadeInLeft" data-wow-duration="500ms" data-wow-delay="{{ $delay }}ms">
+                    {{ with .image }}
+                    <div class="team-img">
+                        <img src="{{ . | absURL }}" class="team-pic" alt="team-member">
+                    </div>
+                    {{ else }}
+                    <div>
+                        <div class="team-img">
+                            <img src="{{ .Site.BaseURL }}/images/team/user-blank.png" class="team-pic" alt="team-member">
+                        </div>
+                        <div>
+                            <a href="https://fontawesome.com/icons/user?style=solid" target="_blank">user</a> by <a href="https://fontawesome.com/" target="_blank">fontawesome</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank"><img src="/images/cc-by.svg" alt="CC BY 4.0" /></a>
+                        </div>
+                    </div>
+                    {{ end}}
+                    {{ with .name }}<h3 class="team_name">{{ . }}</h3>{{ end }}
+                    {{ with .designation }}<p class="team_designation">{{ . }}</p>{{ end }}
+                    {{ with .description }}<p class="team_text">{{ . }}</p>{{ end }}
+                    <p class="social-icons">
+                        {{ range $index, $element:= .social }}
+                        <a href="{{ .url | safeURL }}" target="_blank">
+                            {{ with .ionicon }}<i class="{{ . }}"></i>{{ end }}
+                            {{ with .fontawesome }}<i class="{{ . }}"></i>{{ end }}
+                        </a>
+                        {{ end }}
+                    </p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ "<!-- Team Section End -->" | safeHTML }}
+{{ end }}

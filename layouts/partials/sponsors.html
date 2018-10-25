@@ -1,0 +1,50 @@
+{{ if .Site.Params.sponsors.enable }}
+{{ "<!-- About Section Start -->" | safeHTML }}
+<section id="sponsors">
+    <div class="container">
+        <div class="block wow fadeInLeft">
+            <h2>{{ .Site.Params.sponsors.title }}</h2>
+        </div>
+    {{ range $index, $element := .Site.Params.sponsors.sponsors }}
+        <div class="row" style="display: flex; align-items: center;">
+            {{ if eq .imgSide "right" }}
+            <div class="d-block d-sm-none col-md-6 col-sm-6">
+                <div class="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
+                    <img class="mx-auto d-block" {{ if .style }}style="{{ .style | safeCSS }}"{{ end }} src="{{ .image | absURL }}" alt="{{ .alt }}">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
+                    <h3>{{ .sponsor }}</h3>
+                    <p>{{ .content | safeHTML }}</p>
+                </div>
+            </div>
+            <div class="d-none d-sm-block col-md-6 col-sm-6">
+                <div class="block wow fadeInRight" data-wow-delay=".3s" data-wow-duration="500ms">
+                    <img class="float-left" {{ if .style }}style="{{ .style | safeCSS }}"{{ end }} src="{{ .image | absURL }}" alt="{{ .alt }}">
+                </div>
+            </div>
+            {{ else if eq .imgSide "left" }}
+            <div class="d-none d-sm-block col-md-6 col-sm-6">
+                <div class="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
+                    <img class="float-right" {{ if .style }}style="{{ .style | safeCSS }}"{{ end }} src="{{ .image | absURL }}" alt="{{ .alt }}">
+                </div>
+            </div>
+            <div class="d-block d-sm-none col-md-6 col-sm-6">
+                <div class="block wow fadeInLeft" data-wow-delay=".3s" data-wow-duration="500ms">
+                    <img class="mx-auto d-block" {{ if .style }}style="{{ .style | safeCSS }}"{{ end }} src="{{ .image | absURL }}" alt="{{ .alt }}">
+                </div>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <div class="block wow fadeInRight" data-wow-delay=".3s" data-wow-duration="500ms">
+                    <h3>{{ .sponsor }}</h3>
+                    <p>{{ .content | safeHTML }}</p>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    {{ end }}
+    </div>
+</section>
+{{ "<!-- About Section End -->" | safeHTML }}
+{{ end }}

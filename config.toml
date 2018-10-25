@@ -3,82 +3,75 @@ languageCode = "en-us"
 title = "Nightwire.de"
 theme = "timer"
 
-# We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/
-
 # Site Menus
 [menu]
     # Navbar Menus
     [[menu.nav]]
-        name    = "About"
-        url     = "/about"
+        name    = "Team"
+        url     = "/team"
         weight  = 2
-    [[menu.nav]]
-        name    = "Services"
-        url     = "/services"
-        weight  = 3
-    [[menu.nav]]
-        name    = "Gallery"
-        url     = "/gallery"
-        weight  = 4
-    [[menu.nav]]
-        name    = "Blog"
-        url     = "/blog"
-        weight  = 5
     [[menu.nav]]
         name    = "Imprint"
         url     = "/imprint"
-        weight  = 6
+        weight  = 3
     [[menu.nav]]
         name    = "Privacy policy"
         url     = "/privacypolicy"
-        weight  = 7
+        weight  = 4
+
+# We Used Ionicons Icon font for Icon, for more details check this link - https://ionicons.com/v2/
+# Fontawesome fonts are also available (Nightwire modification) - https://fontawesome.com/icons?d=gallery&m=free
 
 # Site Params
 [params]
     home = "Home"
+    # Use a text or an image as logo.
+    # You can use either logo_text for text as logo or logo and logo_alt for an image as logo.
+    logo_text = "Nightwire"
     #logo = "images/nightwire.png"
-    alt = "Nightwire"
+    #logo_alt = "Nightwire"
     dateFormat = "6 January 2006"
 
     # Banner Section
     [params.banner]
         enable  = true
         bgImage = "images/slider.jpg"
-        heading = "Hi, we are Nightwire & we provide"
-        description = "Proudly delivered with love since 2010."
+        heading = "Hi, we are Nightwire & we like to share"
+        description = "Proudly delivered with <i class=\"far fa-heart\"></i> & <i class=\"fas fa-coffee\"></i> since 2010."
         btn     = true
-        btnText = "Connect to TeamSpeak 3"
+        btnText = "<div><span style=\"font-size: 2em;\">Connect  </span> <i class=\"fab fa-teamspeak fa-2x\"></i></div>"
         btnURL  = "ts3server://ts3.nightwire.de?port=9987"
         [[params.banner.flipText]]
             title   = "a TeamSpeak 3 Server."
         [[params.banner.flipText]]
-            title   = "a tech blog."
+            title   = "our knowledge in our tech blog."
         [[params.banner.flipText]]
             title   = "some game servers."
 
     # Homepage About Section
     [params.about]
         enable  = true
-        title   = "ABOUT ME"
-        content = "Hello, I’m a UI/UX Designer & Front End Developer from Victoria, Australia. I hold a master degree of Web Design from the World University.And scrambled it to make a type specimen book. It has survived not only five centuries. <br> <br> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, adipisci voluptatum repudiandae, natus impedit repellat aut officia illum at assumenda iusto reiciendis placeat. Temporibus, vero."
-        image   = "images/about/about.jpg"
+        title   = "ABOUT US"
+        content = "We're a small group of people interested in technical stuff like networking or coding.<br/>While hosting servers for our own projects,<br/>we decided to let other people use our servers aswell.<br/><br/>Over the time we've opened a quite large TeamSpeak3 Public Server and some successful GMod Servers."
+        #image   = ""
 
-    # Call to Action
-    [params.cta]
-        enable  = true
-        title   = "SO WHAT YOU THINK ?"
-        content = "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis,<br>possimus commodi, fugiat magnam temporibus vero magni recusandae? Dolore, maxime praesentium."
-        btnText = "Contact with me"
-        btnURL  = "/contact"
+    # Sponsors Section
+    [params.sponsors]
+        enable = true
+        title = "Sponsors"
+        [[params.sponsors.sponsors]]
+            sponsor = "TeamSpeak"
+            content = "TeamSpeak is sponsoring us with a 512 Slot license for our free public TeamSpeak 3 server.<br/><a href=\"https://www.teamspeak.com/en/\" target=\"_blank\">https://www.teamspeak.com/</a> "
+            imgSide = "left"
+            image   = "/images/ts_stacked_black.png"
+            alt     = "TeamSpeak logo"
+            style   = "height: 150px; width: auto;"
 
-    # Portfolio Section On Homepage
-    [params.portfolio]
-        enable  = true
-        title   = "Latest Works"
-        subtitle= "Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit amet est. Aenean posuere tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus."
-
-    # Feature Product Section
-    [params.featureProduct]
-        enable  = true
-        title   = "SOME OF OUR FEATURES WORKS"
-        subtitle= "Aliquam lobortis. Maecenas vestibulum mollis diam. Pellentesque auctor neque nec urna. Nulla sit amet est. Aenean posuere <br> tortor sed cursus feugiat, nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus."
+    # Footer section
+    [params.footer]
+        customized  = true # Set this variable to true if you customized the design.
+        copyright_owner = "Nightwire"
+        copyright_since = "2010"
+        [[params.footer.social]]
+            icon = "ion-social-github"
+            link = "https://github.com/nightwire"
