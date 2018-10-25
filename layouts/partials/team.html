@@ -17,7 +17,8 @@
                     {{ else }}
                     <div>
                         <div class="team-img">
-                            <img src="{{ .Site.BaseURL }}/images/team/user-blank.png" class="team-pic" alt="team-member">
+                            {{ $defaultAvatar := "images/team/user-blank.png" }}
+                            <img src="{{ $defaultAvatar | absURL }} " class="team-pic" alt="team-member">
                         </div>
                         <div>
                             <a href="https://fontawesome.com/icons/user?style=solid" target="_blank">user</a> by <a href="https://fontawesome.com/" target="_blank">fontawesome</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/legalcode" target="_blank"><img src="/images/cc-by.svg" alt="CC BY 4.0" /></a>
