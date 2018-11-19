@@ -52,7 +52,7 @@ theme = "timer"
     [params.about]
         enable  = true
         title   = "ABOUT US"
-        content = "We're a small group of people interested in technical stuff like networking or coding.<br/>While hosting servers for our own projects,<br/>we decided to let other people use our servers aswell.<br/><br/>Over the time we've opened a quite large TeamSpeak3 Public Server and some successful GMod Servers."
+        content = "We're a small group of people interested in technical stuff like networking or coding.<br/>While hosting servers for our own projects, we decided to let other people use our servers aswell.<br/><br/>Over the time we've opened a quite large TeamSpeak3 Public Server and some successful GMod Servers."
         #image   = ""
 
     # Sponsors Section
